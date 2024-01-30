@@ -1,20 +1,132 @@
+*, 
+:before,
+:after{
+  box-sizing:border-box;
+}
+
 .container{
-    text-align:center;
-    font-size:2rem;
-    font-family:  roboto, san-serif;
-  }
-  
-  #value{
-    font-size: 5rem;
-  }
-  
-  .btn{
-    background:transparent;
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    border-radius: 5px;
-  }
-  
-  .btn:hover{
-    background:rgb(0,0,0,0.3);
-  }
+  font-family:"DM Sans",sans-serif;
+  background: #ff6666;
+  color:#fff;
+  max-width:500px;
+  margin: 4rem auto;
+  padding: 2rem 3rem 3rem;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.29); 
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.29);
+}
+
+.title{
+  font-weight:normal;
+  font-size:2.6rem;
+  letter-spacing:0.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.title span{
+  display:block;
+  font-size:0.8rem;
+  margin-bottom:0.7rem;
+  margin-left:3px;
+  margin-top:0.2rem;
+}
+
+.task-list{
+  list-style:none;
+  margin-top:2.6rem;
+}
+
+.task-list li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background: rgba(255,255,255,0.1);
+  padding: 1.1rem 3rem;
+  margin: 0 -3rem 4px;
+  transition: all 0.5s ease;
+  transform-origin: top left;
+}
+
+.fall{
+  transform: rotate(10deg);
+  opacity: 0;
+}
+
+.task-list .actions{
+  flex-shrink:0;
+  padding-left:0.7rem;
+}
+
+.task-list .btn-action{
+  border:none;
+  background:none;
+  cursor: pointer;
+  color: #fff;
+}
+
+input[type="checkbox"]{
+  cursor: pointer;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.task-list input[type="checkbox"]{
+  position: relative;
+  top: 0.3rem;
+}
+
+.task-list .label{
+  transition: opacity 0.2s liner;
+}
+
+.task-list .done .label{
+  opacity: 0.6;
+  text-decoration:line-through;
+}
+
+.filter-wrapper{
+  display:flex;
+  justify-content: flex-end;
+  margin-top:1em;
+}
+
+.form{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top:3rem;
+}
+
+.form label{
+  min-width:100%;
+  font-size:1.3rem;
+  margin-bottom:0.5rem;
+}
+
+.form input{
+  flex-grow:1;
+  border:none;
+  background:#f7f1f1;
+  padding: 0 1.5rem;
+  font-size:initial;
+}
+
+.form button{
+  border:none;
+  padding: 0 1.3rem;
+  background: #ff6666;
+  color: white;
+  text-transform: uppercase;
+  margin-left:5px;
+  border: 1px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: background 0.2s ease-out;
+}
+
+.form button:hover{
+  filter:brightness(110%);
+}
+
+.form input,
+.form button{
+  font-family: "Quicksand", sans-serif;
+  height: 3rem;
+}
